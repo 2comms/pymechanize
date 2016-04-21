@@ -4,19 +4,20 @@ pymechanize: Stateful web browsing and scrapping in python
 About
 -----
 
-Stateful simple pythonic programmatic web browsing in Python, after Andy Lester’s Perl module `WWW::Mechanize`. `pymechanize` is python3 enabled version of John Lee's python2 mechanize project.
+`pymechanize` is python3 enabled version of John Lee's python2 mechanize project. `pymechanize` is a simple pythonic programmatic web browsing in Python, after Andy Lester’s Perl module `WWW::Mechanize`.
 
-`pymechanize.Browser` and `pymechanize.UserAgentBase` implement the interface of `urllib.OpenerDirector` therefore any URL can be opened not just http:
+`pymechanize.Browser` and `pymechanize.UserAgentBase` implement the interface of `urllib.OpenerDirector` therefore any URL can be opened not just http.
 `pymechanize.UserAgentBase` offers easy dynamic configuration of user-agent features like protocol, cookie, redirection and robots.txt handling,
 without having to make a new OpenerDirector each time, e.g. by calling build_opener().
-Easy HTML form filling.
-Convenient link parsing and following.
-Browser history (.back() and .reload() methods).
-The Referer HTTP header is added properly (optional).
-Automatic observance of robots.txt.
-Automatic handling of HTTP-Equiv and Refresh.
+* Easy HTML form filling.
+* Convenient link parsing and following.
+* Browser history (.back() and .reload() methods).
+* The Referer HTTP header is added properly (optional).
+* Automatic observance of robots.txt.
+* Automatic handling of HTTP-Equiv and Refresh.
 
 ## Example ##
+
 .. code-block:: python
 
     import re
@@ -156,7 +157,7 @@ and run: `python setup.py nosetests`.
 
 To run the test suite on Python3, PyPy3 versions and `lxml>=3.4.4`, `BeautifulSoup4>=4.4.1` you can use `tox`.
 
-.. code-block:: shell
+.. code-block:: python
 
     # Install tox
     $ pip install tox
@@ -165,7 +166,7 @@ To run the test suite on Python3, PyPy3 versions and `lxml>=3.4.4`, `BeautifulSo
 
 To run a single or selected test suits, use the nosetest convention. E.g.
 
-.. code-block:: shell
+.. code-block:: python
 
     $ python setup.py nosetests --tests tests/example_test.py:ExampleTestClass.example_test_method
 
